@@ -1,0 +1,6 @@
+/*Write all of your CSS here*/
+.box{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}

@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Log In Register Page";
+}
+<div class="container">
+    <h1>Welcome to the Dojo Activity Center</h1>
+    <div class="register box">
+        <h3>Register</h3>
+        <form action="Register" method="post" class="myForm">
+            <label for="fname">First Name:</label>
+            <input id="fname" type="text" name="FirstName"><br> 
+
+            <label for="lanem">Last Name:</label>
+            <input id="lname" type="text" name="LastName"><br>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="Email"><br>
+
+            <label for="pw">Password:</label>
+            <input id="pw" type="password" name="Password"><br>
+
+            <label for="pw_conf">Password Confirm:</label>
+            <input id="pw_conf" type="password" name="PasswordConfirmation"><br><br>
+
+            <input type="submit" value="Register" class="btn btn-success">
+        </form>
+    </div>
+
+
+    <div class="login box">
+        
+        <h3>Log In</h3>
+        <form action="LoginUser" method="post" class="myForm">
+            <label for="emaill">Email:</label>
+            <input id="emaill" type="email" name="Email"><br>
+
+            <label for="passwordl">Password:</label>
+            <input id="passwordl" type="password" name="PwToCheck"><br><br>
+
+            <input type="submit" value="Log In" class="btn btn-success">
+        </form>
+    </div>
+</div>
