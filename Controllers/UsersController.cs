@@ -6,6 +6,7 @@ using activityCenter.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace activityCenter.Controllers{
     public class UsersController : Controller{
@@ -86,6 +87,13 @@ namespace activityCenter.Controllers{
         public IActionResult Dashboard(){
             System.Console.WriteLine("IN DASHBOARD METHOD!!");
             ViewBag.CurrUser = _context.Users.SingleOrDefault( user => user.UserId == HttpContext.Session.GetInt32("CurrUserId") );
+            if(ViewBag.AllActivities = null){
+                ViewBag.AllActivities = new List<User>();
+            } else {
+                ViewBag.AllActivities = _context.Activities
+                    .Include( activity => activity.User)
+                    .ToList();
+            }
             return View();
         }
 

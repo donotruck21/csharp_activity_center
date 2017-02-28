@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Dashboard Page";
+}
+<div class="container">
+    <div class="head-nav">
+        <h1>Dojo Activity Center</h1>
+        <a href="Dashboard" class="home">Home</a>
+        <a href="Logout">Log Out</a>
+    </div>
+    <hr>
+    <h1>Create An Activity!</h1>
+    <form action="Create" method="post">
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="Title"><br> 
+
+        <label for="date">Date:</label>
+        <input id="date" type="date" name="ActivityDate"><br>
+
+        <label for="time">Time:</label>
+        <input id="time" type="time" name="ActivtyTime"><br>
+
+        <label for="duration">Duration:</label>
+        <input id="duration" type="number" name="DurationVal">
+        <select name="DurationUnit">
+            <option value="Days">Days</option>
+            <option value="Hours">Hours</option>
+            <option value="Minutes">Minutes</option>
+        </select><br>
+
+        <label for="desc">Description:</label><br>
+        <textarea name="Description" id="desc" cols="30" rows="10"></textarea><br>
+
+        <input type="submit" value="Create!" class="btn btn-success">
+    </form>
+    <div>
+        @{
+            foreach(var error in ViewBag.Errors){
+                if(@error.Errors.Count > 0){
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+        }
+    </div>
+</div>

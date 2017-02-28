@@ -20,8 +20,14 @@
             </tr>
         </thead>
         <tbody>
-            
+            @{
+                foreach(var activity in ViewBag.AllActivities){
+                    <tr>
+                        <td>@activity.Title</td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
-    <button href="NewActivity">Add A New Activity!</button>
+    <a href="NewActivity"><button>Add A New Activity!</button></a>
 </div>

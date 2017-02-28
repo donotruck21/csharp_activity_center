@@ -192,6 +192,7 @@
 -resource:"/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/obj/Debug/netcoreapp1.0/activityCenterdotnet-compile.deps.json",activityCenter.deps.json
 "/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Program.cs"
 "/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Startup.cs"
+"/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Controllers/ActivitiesController.cs"
 "/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Controllers/UsersController.cs"
 "/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Migrations/20170228171254_FirstMigration.cs"
 "/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Migrations/20170228171254_FirstMigration.Designer.cs"
