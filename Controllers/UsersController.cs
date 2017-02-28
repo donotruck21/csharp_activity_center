@@ -30,7 +30,7 @@ namespace activityCenter.Controllers{
             return View();
         }
 
-        // POSt: /Home/
+        // POST: /Register/
         [HttpPost]
         [Route("Register")]
         public IActionResult Register(RegisterViewModel model){
