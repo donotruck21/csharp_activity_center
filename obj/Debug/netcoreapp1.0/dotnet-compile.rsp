@@ -198,5 +198,10 @@
 /Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Program.cs
 /Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Startup.cs
 /Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Controllers/UsersController.cs
+/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Migrations/20170228171254_FirstMigration.cs
+/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Migrations/20170228171254_FirstMigration.Designer.cs
+/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Migrations/activityCenterContextModelSnapshot.cs
+/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Models/Activity.cs
 /Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Models/activityCenterContext.cs
+/Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Models/JoinedUser.cs
 /Users/donotruck21/Desktop/coding_dojo/instructor/belt_exams/csharp_exams/activityCenter/Models/User.cs

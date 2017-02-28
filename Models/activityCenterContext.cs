@@ -7,5 +7,7 @@ namespace activityCenter.Models
         { }
  
         public DbSet<User> Users { get; set; }
+        public DbSet<JoinedUser> JoinedUsers { get; set; }
+        public DbSet<Activity> Activities { get; set; }
     }
 }
