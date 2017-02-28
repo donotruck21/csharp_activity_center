@@ -8,3 +8,12 @@
 .tiny{
     font-size: 10px;
 }
+
+.head-nav h1, .head-nav h3{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.head-nav h1{
+    margin-right: 200px;
+}
