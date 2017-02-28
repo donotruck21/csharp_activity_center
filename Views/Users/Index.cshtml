@@ -17,6 +17,7 @@
 
             <label for="pw">Password:</label>
             <input id="pw" type="password" name="Password"><br>
+            <p class="tiny">Must container 1 Uppercase, 1 Lowercase, 1 Number, 1 Special Character</p>
 
             <label for="pw_conf">Password Confirm:</label>
             <input id="pw_conf" type="password" name="PasswordConfirmation"><br><br>
@@ -38,5 +39,15 @@
 
             <input type="submit" value="Log In" class="btn btn-success">
         </form>
+    </div>
+
+    <div>
+        @{
+            foreach(var error in ViewBag.Errors){
+                if(@error.Errors.Count > 0){
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+        }
     </div>
 </div>

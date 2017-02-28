@@ -19,17 +19,21 @@ namespace activityCenter.Controllers{
         [HttpGet]
         [Route("")]
         public IActionResult Index(){
+            ViewBag.Errors = new List<User>();
             return View();
         }
 
         // POSt: /Home/
         [HttpPost]
         [Route("Register")]
-        public IActionResult Register(){
-            System.Console.WriteLine("in register route!!");
-            System.Console.WriteLine("in register route!!");
-            System.Console.WriteLine("in register route!!");
-            return RedirectToAction("Index");
+        public IActionResult Register(RegisterViewModel model){
+            if(ModelState.IsValid){
+                System.Console.WriteLine("MODEL STATE IS VALID!!");
+                return RedirectToAction("Index");
+            } else {
+                ViewBag.Errors = ModelState.Values;
+                return View("Index");
+            }
         }
 
 
