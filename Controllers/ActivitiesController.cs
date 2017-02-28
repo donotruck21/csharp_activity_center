@@ -6,6 +6,7 @@ using activityCenter.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace activityCenter.Controllers{
     public class ActivitiesController : Controller{
@@ -47,6 +48,14 @@ namespace activityCenter.Controllers{
                 ViewBag.Errors = ModelState.Values;
                 return View("New");
             }
+        }
+
+        // POST: /Activity<ID>/
+        [HttpGet]
+        [Route("Activity/{ActivityId}")]
+        public IActionResult Show(int ActivityId){
+            ViewBag.ThisActivity = _context.Activities.Include(activity => activity.User).SingleOrDefault(act => act.ActivityId == ActivityId);
+            return View();
         }
 
 

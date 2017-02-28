@@ -23,8 +23,12 @@
             @{
                 foreach(var activity in ViewBag.AllActivities){
                     <tr>
-                        <td>@activity.Title</td>
-                        <td>@activity.Description</td>
+                        <td><a href="activity/@activity.ActivityId">@activity.Title</a></td>
+                        <td>@activity.ActivityDate.ToString("MM/dd") @activity.ActivityTime.ToString("hh:mm tt")</td>
+                        <td>@activity.DurationVal @activity.DurationUnit</td>
+                        <td>@activity.User.FirstName @activity.User.LastName</td>
+                        <td>0</td>
+                        <td>action</td>
                     </tr>
                 }
             }
