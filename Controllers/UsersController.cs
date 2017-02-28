@@ -87,12 +87,14 @@ namespace activityCenter.Controllers{
         public IActionResult Dashboard(){
             System.Console.WriteLine("IN DASHBOARD METHOD!!");
             ViewBag.CurrUser = _context.Users.SingleOrDefault( user => user.UserId == HttpContext.Session.GetInt32("CurrUserId") );
-            if(ViewBag.AllActivities = null){
+
+            List<Activity> AllActivities = _context.Activities
+                                                .Include(activity => activity.User)
+                                                .ToList();
+            if(AllActivities == null){
                 ViewBag.AllActivities = new List<User>();
             } else {
-                ViewBag.AllActivities = _context.Activities
-                    .Include( activity => activity.User)
-                    .ToList();
+                ViewBag.AllActivities = AllActivities;
             }
             return View();
         }
