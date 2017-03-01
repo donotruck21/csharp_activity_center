@@ -4,12 +4,15 @@
 <div class="container">
     <div class="head-nav">
         <h1>Dojo Activity Center</h1>
-        <a href="Dashboard" class="home">Home</a>
-        <a href="Logout">Log Out</a>
+        <a href="/Dashboard" class="home">Home</a>
+        <a href="/Logout">Log Out</a>
     </div>
     <hr>
     <h1>@ViewBag.ThisActivity.Title</h1>
-    <a href="Join"><button class="btn btn-success btn-lg">Join</button></a>
+    <form action="/Join" method="post">
+        <input type="hidden" name="ActivityId" value="@ViewBag.ThisActivity.ActivityId">
+        <input type="submit" value="Join" class="btn btn-success btn-lg">
+    </form>
     <h3>Event Coordinator: @ViewBag.ThisActivity.User.FirstName @ViewBag.ThisActivity.User.LastName</h3>
     <h3>Description:</h3>
     <p>@ViewBag.ThisActivity.Description</p>

@@ -59,6 +59,28 @@ namespace activityCenter.Controllers{
         }
 
 
+        // POST: /Join/
+        [HttpPost]
+        [Route("Join")]
+        public IActionResult Join(int ActivityId){
+            User CurrUser = _context.Users.SingleOrDefault( user => user.UserId == HttpContext.Session.GetInt32("CurrUserId") );
+
+            Activity CurrActivity = _context.Activities.SingleOrDefault( act => act.ActivityId == ActivityId );
+
+            JoinedUser AlreadyJoined = _context.JoinedUsers.SingleOrDefault( JU => 
+                (JU.ActivityId == CurrActivity.ActivityId) &&
+                (JU.UserId == CurrUser.UserId));
+
+            if(AlreadyJoined == null){
+                System.Console.WriteLine("NEW JOINING USER");
+            } else {
+                System.Console.WriteLine("THIS JOIN ALREADY EXISTS");
+            }
+            
+            return RedirectToAction("Dashboard", "Users");
+        }
+
+
 
 
     }
